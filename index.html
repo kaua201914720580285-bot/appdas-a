@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zzab Webcommerce | Calçados com estilo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (biblioteca oficial de ícones) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts para fonte mais moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #fef9f4; /* tom quente de fundo */
+            color: #2d2d2d;
+        }
+        .bg-brand {
+            background: linear-gradient(135deg, #2b1e0f 0%, #3f301d 100%);
+        }
+        .navbar-brand img {
+            max-height: 45px;
+        }
+        .hero-section {
+            background: linear-gradient(105deg, #fae6d8 0%, #fff2e9 100%);
+            border-bottom: 4px solid #d9b382;
+            padding: 3rem 0;
+        }
+        .hero-title {
+            font-weight: 700;
+            color: #2b1e0f;
+            font-size: 2.8rem;
+            letter-spacing: -0.02em;
+        }
+        .hero-highlight {
+            color: #b45f2b;
+        }
+        .icone-card {
+            font-size: 2.5rem;
+            color: #b45f2b;
+            transition: transform 0.2s;
+        }
+        .icone-card:hover {
+            transform: scale(1.15);
+            color: #8e4a20;
+        }
+        .card-produto {
+            border: none;
+            border-radius: 24px;
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.15);
+            transition: all 0.2s;
+        }
+        .card-produto:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px -12px #b45f2b80;
+        }
+        .btn-sapatos {
+            background-color: #2b1e0f;
+            color: white;
+            border-radius: 60px;
+            padding: 0.6rem 2rem;
+            font-weight: 600;
+            border: 2px solid #2b1e0f;
+        }
+        .btn-sapatos:hover {
+            background-color: #b45f2b;
+            border-color: #b45f2b;
+            color: white;
+        }
+        .info-rodape {
+            background-color: #2b1e0f;
+            color: #eedcc9;
+        }
+        .social-icon {
+            color: #d9b382;
+            font-size: 1.7rem;
+            margin-right: 1rem;
+            transition: 0.15s;
+        }
+        .social-icon:hover {
+            color: #f5c49b;
+        }
+        .destaque-frase {
+            font-size: 1.2rem;
+            font-weight: 400;
+            border-left: 5px solid #b45f2b;
+            padding-left: 1rem;
+            background: #ffffffb3;
+            border-radius: 0 20px 20px 0;
+        }
+        .footer-link {
+            color: #eedcc9;
+            text-decoration: none;
+            border-bottom: 1px dotted #b45f2b;
+        }
+        .footer-link:hover {
+            color: white;
+            border-bottom: 1px solid #f5c49b;
+        }
+    </style>
+</头>
+<body>
 
+<!-- NAVBAR fixa e responsiva -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-brand py-3 shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+            <i class="bi bi-grid-3x3-gap-fill me-2" style="color: #d9b382;"></i>Zzab Webcommerce
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#calcados">Calçados</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre nós</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO (HOME) -->
+<section id="home" class="hero-section">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-warning bg-opacity-25 text-dark mb-3 px-3 py-2 rounded-pill">
+                    <i class="bi bi-star-fill text-warning me-1"></i> Desde 2016
+                </span>
+                <h1 class="hero-title">Seus pés merecem <span class="hero-highlight">conforto</span> e estilo</h1>
+                <p class="lead text-secondary my-4">Calçados para todas as ocasiões, com qualidade e procedência. A Zzab Webcommerce é varejo especializado em levar o melhor calçado até você.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#calcados" class="btn btn-sapatos btn-lg"><i class="bi bi-bag-heart me-2"></i>Conheça nossa linha</a>
+                    <a href="#contato" class="btn btn-outline-dark btn-lg rounded-pill px-4"><i class="bi bi-whatsapp me-2"></i>Fale conosco</a>
+                </div>
+                <!-- mini frase com ícone -->
+                <div class="destaque-frase mt-5 p-3">
+                    <i class="bi bi-patch-check-fill me-2" style="color:#b45f2b;"></i> 
+                    <span class="fw-semibold">“A loja online do seu jeito — entrega rápida e troca garantida.”</span>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <!-- Imagem ilustrativa de calçados (usamos ícones grandes e uma vitrine) -->
+                <i class="bi bi-bag-plus" style="font-size: 10rem; color: #b45f2b; opacity: 0.6;"></i>
+                <div class="row mt-3">
+                    <div class="col-4"><i class="bi bi-shoe-print" style="font-size: 3rem; color:#3f301d;"></i><br>Esportivo</div>
+                    <div class="col-4"><i class="bi bi-suit-heart" style="font-size: 3rem; color:#b45f2b;"></i><br>Casual</div>
+                    <div class="col-4"><i class="bi bi-gem" style="font-size: 3rem; color:#846544;"></i><br>Social</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CARDS DE CALÇADOS (vitrine) -->
+<section id="calcados" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-uppercase text-secondary-emphasis bg-light px-3 py-1 rounded-pill"><i class="bi bi-grid"></i> Destaques</span>
+            <h2 class="display-5 fw-semibold mt-2">Navegue por estilos</h2>
+            <p class="text-secondary">Tênis, sapatilhas, botas e muito mais — tudo em um só lugar.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-produto p-3 text-center h-100">
+                    <i class="bi bi-shoe-print icone-card"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Tênis Urban</h5>
+                        <p class="card-text small">Leve, respirável e com amortecimento. Ideal para o dia a dia.</p>
+                        <span class="badge bg-brand text-white mb-2">A partir de R$ 189,90</span>
+                    </div>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-produto p-3 text-center h-100">
+                    <i class="bi bi-suit-heart icone-card"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Sapatilha Confort</h5>
+                        <p class="card-text small">Design feminino, palmilha macia. Disponível em várias cores.</p>
+                        <span class="badge bg-brand text-white mb-2">A partir de R$ 139,90</span>
+                    </div>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-produto p-3 text-center h-100">
+                    <i class="bi bi-gem icone-card"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Mocassim Clube</h5>
+                        <p class="card-text small">Sofisticação e conforto para reuniões e eventos casuais.</p>
+                        <span class="badge bg-brand text-white mb-2">A partir de R$ 229,90</span>
+                    </div>
+                </div>
+            </div>
+            <!-- card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-produto p-3 text-center h-100">
+                    <i class="bi bi-tree icone-card"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bota Aventura</h5>
+                        <p class="card-text small">Couro resistente, forro térmico. Para trilhas ou cidade.</p>
+                        <span class="badge bg-brand text-white mb-2">A partir de R$ 289,90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-outline-secondary rounded-pill px-5 py-3"><i class="bi bi-arrow-right-circle me-2"></i>Ver toda coleção</a>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE / INFORMAÇÕES DA EMPRESA + ÍCONES -->
+<section id="sobre" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+                <i class="bi bi-building fs-1 text-secondary"></i>
+                <h3 class="fw-semibold">Sobre a Zzab Webcommerce</h3>
+                <p class="text-secondary">Sua loja de calçados com atendimento digital e estoque físico em Cariacica - SC.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <i class="bi bi-truck icone-card"></i>
+                    <h5 class="mt-2">Entregamos para todo o Brasil</h5>
+                    <p>Parceria com Correios e transportadoras. Frete fixo para SC e capitais.</p>
+                    <div class="d-flex align-items-center mt-3 text-secondary">
+                        <i class="bi bi-calendar-check me-2"></i><span>Data da situação cadastral: <strong>29/03/2016</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <i class="bi bi-award icone-card"></i>
+                    <h5 class="mt-2">Qualidade e procedência</h5>
+                    <p>Calçados originais, compra segura. CNPJ ativo e registrado na Receita.</p>
+                    <div class="d-flex align-items-center mt-3 text-secondary">
+                        <i class="bi bi-file-earmark-text me-2"></i><span>CNPJ: <strong>07.900.208/0077-04</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dados cadastrais completos em cartão -->
+        <div class="card mt-5 border-0 shadow-sm">
+            <div class="card-body p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+                        <i class="bi bi-building fs-1" style="color: #b45f2b;"></i>
+                        <p class="fw-bold mb-0">Razão Social</p>
+                        <span>Zzab Comercio de Calcados Ltda.</span>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="bi bi-pin-map fs-4 text-secondary"></i>
+                        <p class="mb-0"><strong>Rua Africa do Sul, 2280</strong><br>Bairro Padre Mathias<br>Cariacica - SC, 29157-901</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="bi bi-telephone fs-4 text-secondary"></i>
+                        <p class="mb-0"><strong>(21) 98560-2739</strong><br>WhatsApp / ligações</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="bi bi-envelope fs-4 text-secondary"></i>
+                        <p class="mb-0">contato@zzabwebcommerce.com.br<br> (exemplo de e-mail)</p>
+                    </div>
+                </div>
+                <div class="border-top mt-4 pt-3 text-muted small">
+                    <i class="bi bi-check-circle-fill text-success me-1"></i> Situação cadastral regular desde 29/03/2016 – Nome Fantasia: <strong>Zzab Webcommerce</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FRASES E ÍCONES EXTRAS (diferenciais) -->
+<section class="py-5">
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+            <div class="col">
+                <div class="p-3">
+                    <i class="bi bi-arrow-repeat display-6" style="color:#2b1e0f;"></i>
+                    <p class="fw-semibold mt-2">Troca fácil<br><span class="small text-secondary">em até 30 dias</span></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <i class="bi bi-shield-check display-6" style="color:#2b1e0f;"></i>
+                    <p class="fw-semibold mt-2">Compra segura<br><span class="small text-secondary">SSL e antifraude</span></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <i class="bi bi-credit-card display-6" style="color:#2b1e0f;"></i>
+                    <p class="fw-semibold mt-2">Parcele em 12x<br><span class="small text-secondary">sem juros</span></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <i class="bi bi-gift display-6" style="color:#2b1e0f;"></i>
+                    <p class="fw-semibold mt-2">Embalagem especial<br><span class="small text-secondary">para presente</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO / RODAPÉ COM INFORMAÇÕES -->
+<footer id="contato" class="info-rodape pt-5 pb-4">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h5 class="text-white fw-semibold"><i class="bi bi-grid-3x3-gap-fill me-2"></i>Zzab Webcommerce</h5>
+                <p class="small opacidade-75">Comércio varejista de calçados com foco no conforto e na satisfação dos clientes. Atendimento 100% digital e loja física em Cariacica/SC.</p>
+                <div class="mt-4">
+                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <h6 class="text-white">Ajuda</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="footer-link">Perguntas frequentes</a></li>
+                    <li><a href="#" class="footer-link">Trocas e devoluções</a></li>
+                    <li><a href="#" class="footer-link">Política de privacidade</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <h6 class="text-white">Contato direto</h6>
+                <ul class="list-unstyled small">
+                    <li><i class="bi bi-whatsapp me-2"></i>(21) 98560-2739</li>
+                    <li><i class="bi bi-envelope me-2"></i>contato@zzabwebcommerce.com</li>
+                    <li><i class="bi bi-clock-history me-2"></i>Seg a Sex 9h–18h</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h6 class="text-white">Endereço cadastral</h6>
+                <address class="small">
+                    Rua Africa do Sul, 2280<br>
+                    Bairro Padre Mathias<br>
+                    Cariacica - SC, CEP 29157-901<br>
+                    <span class="badge bg-warning bg-opacity-25 mt-2">CNPJ 07.900.208/0077-04</span>
+                </address>
+            </div>
+        </div>
+
+        <hr class="opacity-25 mt-4">
+        <div class="d-flex flex-wrap justify-content-between small">
+            <span>&copy; 2025 Zzab Comercio de Calcados Ltda. - Todos os direitos reservados.</span>
+            <span class="mt-2 mt-sm-0"><i class="bi bi-suit-heart-fill text-danger me-1"></i> Feito com bootstrap e sapatos confortáveis</span>
+        </div>
+        <!-- repetindo a data e nome fantasia por redundância -->
+        <div class="text-center text-secondary-emphasis mt-3 small opacity-50">
+            Situação cadastral: 29/03/2016 | Nome fantasia: Zzab Webcommerce
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (para navbar toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- opcional: tooltips etc, mas só para funcionamento básico -->
+</body>
+</html>
